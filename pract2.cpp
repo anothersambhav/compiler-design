@@ -4,7 +4,6 @@ using namespace std;
 
 bool isValid(string str, int n)
 {
-
     if (!((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || str[0] == '_'))
         return false;
     for (int i = 1; i < str.length(); i++)
@@ -18,11 +17,8 @@ bool isValid(string str, int n)
 int main()
 {
     string str;
-    cin>>str;
+    cin >> str;
     int n = str.length();
-    if (isValid(str, n))
-        cout << "Valid";
-    else
-        cout << "Invalid";
+    isValid(str, n) ? cout << "VALID" << endl : cout << "INVALID" << endl;
     return 0;
 }
